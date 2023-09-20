@@ -1,5 +1,37 @@
+
+
 {
     "navigationFallback": {
         "rewrite": "/index.html"
+    },
+  "routes": [
+    {
+     "route": "/login",
+      "rewrite": "/.auth/login/IOP",
+      "allowedRoles": ["anonymous", "authenticated"]
     }
+  ],
+
+  "auth": {
+    "identityProviders": {
+      "customOpenIdConnectProviders": {
+        "IOP": {
+          "registration": {
+            "clientIdSettingName": "AADB2C_PROVIDER_CLIENT_ID",
+            "clientCredential": {
+              "clientSecretSettingName": "AADB2C_PROVIDER_CLIENT_SECRET"
+            },
+            "openIdConnectConfiguration": {
+              "wellKnownOpenIdConfiguration": "https://ohid.verify.ohio.gov/oidc/endpoint/default/.well-known/openid-configuration"
+            }
+          },
+          "login": {
+            "nameClaimType": "name",
+            "scopes": ["openid", "profile","email"]
+          }
+        }
+      }
+    }
+  }
+
 }
