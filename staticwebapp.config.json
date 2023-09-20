@@ -17,16 +17,16 @@
       "customOpenIdConnectProviders": {
         "IOP": {
           "registration": {
-            "clientIdSettingName": "AADB2C_PROVIDER_CLIENT_ID",
+            "clientIdSettingName": "IOP_PROVIDER_CLIENT_ID",
             "clientCredential": {
-              "clientSecretSettingName": "AADB2C_PROVIDER_CLIENT_SECRET"
+              "clientSecretSettingName": "IOP_PROVIDER_CLIENT_SECRET"
             },
             "openIdConnectConfiguration": {
               "wellKnownOpenIdConfiguration": "https://ohid.verify.ohio.gov/oidc/endpoint/default/.well-known/openid-configuration"
             }
           },
           "login": {
-            "nameClaimType": "name",
+            "nameClaimType": "eidmuserid",
             "scopes": ["openid", "profile","email"]
           }
         }
