@@ -4,13 +4,6 @@
     "navigationFallback": {
         "rewrite": "/index.html"
     },
-  "routes": [
-    {
-     "route": "/login",
-      "rewrite": "/.auth/login/IOP",
-      "allowedRoles": ["anonymous", "authenticated"]
-    }
-  ],
 
   "auth": {
     "identityProviders": {
