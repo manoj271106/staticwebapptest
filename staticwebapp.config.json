@@ -1,11 +1,17 @@
 
 
 {
-    "navigationFallback": {
+"navigationFallback": {
         "rewrite": "/index.html"
     },
+"routes": [
+    {
+      "route": "/.auth/login/IOP/callback",
+      "allowedRoles": ["anonymous", "authenticated"]
+    }
+  ],
 
-  "auth": {
+ "auth": {
     "identityProviders": {
       "customOpenIdConnectProviders": {
         "IOP": {
