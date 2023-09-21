@@ -26,7 +26,8 @@
           },
           "login": {
             "nameClaimType": "eidmuserid",
-            "scopes": ["openid", "profile","email"]
+            "scopes": ["openid"],
+            "loginParameterNames":[]
           }
         }
       }
